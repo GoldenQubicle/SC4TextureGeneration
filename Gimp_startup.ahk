@@ -14,6 +14,13 @@ Sleep, 100
 Send, {Down}
 Sleep, 100
 
+Wealth(iid){
+	iid_start := SubStr(iid, 1, 8)
+	iid_end := SubStr(iid, 10)
+	result = %iid_start%%Clipboard%%iid_end%
+	return result
+	}
+
 
 closeFile(){
 	Sleep, 100

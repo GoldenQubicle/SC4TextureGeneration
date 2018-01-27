@@ -12,7 +12,7 @@ Sleep, 100
 
 Send, {Tab}{Enter}
 Sleep, 50
-Send, 0x5E5B5204-C0.png
+Send, 0x5E5B5214-C0.png
 Sleep,50
 
 
@@ -44,7 +44,7 @@ Click, 260, 329 Left, , Down
 Sleep, 50
 Click, 260, 329 Left, , Up
 Sleep, 50
-Send, 7AB50E44-1ABE787D-5E5B5204-C0.bmp
+Send, 7AB50E44-1ABE787D-5E5B5214-C0.bmp
 Sleep, 50
 Send, {Enter}
 Sleep, 333
@@ -56,7 +56,7 @@ Click, 616, 629 Left, , Down
 Sleep, 10
 Click, 616, 628 Left, , Up
 
-Sleep, 8500 ; quick n dirty, this wil lvary greatly depening on number of files, script need to properly be waiting here
+Sleep, 45000 ; quick n dirty, this wil lvary greatly depening on number of files, script need to properly be waiting here
 
 Sleep, 10
 Click, 465, 363 Left, , Down
@@ -73,7 +73,7 @@ Send, _ReaderLoadList.txt
 Sleep, 50
 Send, {Enter}
 Sleep, 500
-Send, test.dat
+Send, test3.dat
 Sleep, 50
 Send, {Enter}
 Sleep, 50

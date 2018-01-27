@@ -8,3 +8,11 @@ WRC := ["WRC_90s_", "WRC_90l_"]
 ;  dev
 ; TextDefs := ["Street_v10"]
 ; WRC := ["WRC_90s_"]
+
+WealthDefs := {"Street_v10":7, "Street_v20":1, "Street_v30":4}
+
+Ortho := ["0x5E54B204-C0"]
+
+
+
+
