@@ -1,5 +1,3 @@
-#Include %A_ScriptDir%\Bender_startup.ahk 
-
 GetSelectedFileName(){
 Sleep, 50
 Clipboard = 

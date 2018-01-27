@@ -1,7 +1,7 @@
 #Include %A_ScriptDir%\Bender_startup.ahk 
 #Include %A_ScriptDir%\Bender_selectFile.ahk 
 
-wrc := WRC[1]
+	wrc := WRC[1]
 
 	; best quarter & backfill
 	Sleep, 100
