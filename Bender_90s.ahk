@@ -8,12 +8,6 @@ wrc := WRC[1]
 	Click, 682, 717 Left, , Down
 	Sleep, 100
 	Click, 682, 717 Left, , Up
-	Sleep, 100
-	Click, 793, 712 Left, , Down
-	Sleep, 100
-	Click, 793, 712 Left, , Up
-
-
 
 Loop, 3{
 	texture := TextDefs[A_Index]
@@ -46,13 +40,11 @@ Loop, 3{
 	Sleep, 100
 	Click, 393, 280 Left, , Up
 	Sleep, 100
-	WinActivate, Select Image File To Save ahk_class #32770
+	Send, %wrc%%texture%.png
 	Sleep, 100
-	Send, {Delete}
-	Send, %wrc%%texture%
+	Send, {Tab}{Down}{Down}{Enter}
 	Sleep, 100
 	Send, {Enter}
-	Sleep, 100
 	WinActivate, Confirm Save As ahk_class #32770
 	Send, {Tab}{Enter}	
 	Sleep, 100

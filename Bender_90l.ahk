@@ -1,22 +1,18 @@
 #Include %A_ScriptDir%\Bender_startup.ahk 
 #Include %A_ScriptDir%\Bender_selectFile.ahk 
 
-wrc := WRC[2]
+	wrc := WRC[2]
+
 
 	; best quarter & backfill
 	Sleep, 100
 	Click, 682, 717 Left, , Down
 	Sleep, 100
 	Click, 682, 717 Left, , Up
-	Sleep, 100
-	Click, 793, 712 Left, , Down
-	Sleep, 100
-	Click, 793, 712 Left, , Up
-
-
 
 Loop, 3{
 	texture := TextDefs[A_Index]
+
 	Sleep, 100
 	OpenFileDialogue()
 	Sleep, 100
@@ -52,8 +48,7 @@ Loop, 3{
 	Sleep, 100
 	Click, 207, 389 Left, , Up
 	Sleep, 100
-
-
+	
 	Sleep, 100
 	Click, 1157, 723 Left, , Down
 	Sleep, 100
@@ -63,13 +58,11 @@ Loop, 3{
 	Sleep, 100
 	Click, 393, 280 Left, , Up
 	Sleep, 100
-	WinActivate, Select Image File To Save ahk_class #32770
+	Send, %wrc%%texture%.png
 	Sleep, 100
-	Send, {Delete}
-	Send, %wrc%%texture%
+	Send, {Tab}{Down}{Down}{Enter}
 	Sleep, 100
 	Send, {Enter}
-	Sleep, 100
 	WinActivate, Confirm Save As ahk_class #32770
 	Send, {Tab}{Enter}	
 	Sleep, 100

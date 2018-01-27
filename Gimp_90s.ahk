@@ -1,13 +1,26 @@
-#Include %A_ScriptDir%\Gimp_startup.ahk 
-#Include %A_ScriptDir%\utils.ahk 
+; #Include %A_ScriptDir%\Gimp_startup.ahk 
 
+#SingleInstance force
+#NoEnv
+#Warn
+#Include %A_ScriptDir%\config.ahk 
 
-for i, master in TextDefs
+Loop % TextDefs.MaxIndex()
+{
+	texture := TextDefs[A_Index]
 
-	for j, curve in WRC
+	Loop % WRC.MaxIndex()
+	{
+		curve := WRC[A_Index]	
+		MsgBox, %curve%%texture%
+	}
+}
 
-	    texture = %curve%%master%
+; for i, master in TextDefs
+
+; 	for j, curve in WRC
+
+; 	    texture = %curve%%master%
 
 		; MsgBox, %curve%%master%
 		
-		SelectFile(texture)
