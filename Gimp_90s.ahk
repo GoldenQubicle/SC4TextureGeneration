@@ -1,5 +1,4 @@
 #Include %A_ScriptDir%\Gimp_startup.ahk 
-#Include %A_ScriptDir%\Gimp_selectFile.ahk 
 
 wrc := WRC[1]
 

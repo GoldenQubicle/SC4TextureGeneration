@@ -1,5 +1,5 @@
 #Include %A_ScriptDir%\Bender_startup.ahk 
-#Include %A_ScriptDir%\Bender_selectFile.ahk 
+; #Include %A_ScriptDir%\Bender_selectFile.ahk 
 
 	wrc := WRC[1]
 
