@@ -2,7 +2,7 @@
 
 wrc := WRC[1]
 
-Loop, 3{
+Loop, %RenderSet% {
 	texture := TextDefs[A_Index]
 	curve = %wrc%%texture%
 	Sleep, 100

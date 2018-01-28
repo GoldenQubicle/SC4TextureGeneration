@@ -56,7 +56,7 @@ Click, 616, 629 Left, , Down
 Sleep, 10
 Click, 616, 628 Left, , Up
 
-Sleep, 45000 ; quick n dirty, this wil lvary greatly depening on number of files, script need to properly be waiting here
+Sleep, 35000 ; quick n dirty, this wil lvary greatly depening on number of files, script need to properly be waiting here
 
 Sleep, 10
 Click, 465, 363 Left, , Down

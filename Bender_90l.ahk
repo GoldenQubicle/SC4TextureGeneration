@@ -9,7 +9,7 @@
 	Sleep, 100
 	Click, 682, 717 Left, , Up
 
-Loop, 3{
+Loop, %RenderSet% {
 	texture := TextDefs[A_Index]
 
 	Sleep, 100
