@@ -6,6 +6,20 @@
 Run, C:\Program Files (x86)\GoFSH Package\Bender.exe, %WorkDir%, Max
 WinActivate, Bender ©2015-7 rivit  v2.4.0.0 ahk_class WindowsForms10.Window.8.app.0.378734a
 
+
+OpenAndSelectFile(texture){
+	Sleep, 500
+	Click, 155, 168 Left, , Down
+	Sleep, 100
+	Click, 155, 168 Left, , Up
+	Sleep, 100	
+	Send, %texture%.png
+	Sleep, 100
+	Send, {Enter}
+	Sleep, 100
+
+}
+
 OpenFileDialogue(){
 	WinActivate, Bender ©2015-7 rivit  v2.4.0.0 ahk_class WindowsForms10.Window.8.app.0.378734a
 

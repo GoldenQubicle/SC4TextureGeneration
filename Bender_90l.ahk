@@ -1,7 +1,6 @@
 #Include %A_ScriptDir%\Bender_startup.ahk 
 
-	wrc := WRC[2]
-
+	wrc := WRC[2
 
 	; best quarter & backfill
 	Sleep, 100
@@ -10,12 +9,13 @@
 	Click, 682, 717 Left, , Up
 
 Loop, %RenderSet% {
+	Sleep, 100
 	texture := TextDefs[A_Index]
-
 	Sleep, 100
-	OpenFileDialogue()
-	Sleep, 100
-	SelectFile(texture)
+	OpenAndSelectFile(texture)
+	; OpenFileDialogue()
+	; Sleep, 100
+	; SelectFile(texture)
 
 	; set box size
 	Sleep, 100

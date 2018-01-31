@@ -1,5 +1,4 @@
 #Include %A_ScriptDir%\Bender_startup.ahk 
-; #Include %A_ScriptDir%\Bender_selectFile.ahk 
 
 	wrc := WRC[1]
 
@@ -10,11 +9,10 @@
 	Click, 682, 717 Left, , Up
 
 Loop, %RenderSet% {
+	Sleep, 100
 	texture := TextDefs[A_Index]
 	Sleep, 100
-	OpenFileDialogue()
-	Sleep, 100
-	SelectFile(texture)
+	OpenAndSelectFile(texture)
 
 	; set box size
 	Sleep, 100
