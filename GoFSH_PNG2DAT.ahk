@@ -12,7 +12,7 @@ Sleep, 100
 
 Send, {Tab}{Enter}
 Sleep, 50
-Send, 0x5E5B5204-C0.png
+Send, 0x5E54B204-C0.png
 Sleep,50
 
 
@@ -44,7 +44,7 @@ Click, 260, 329 Left, , Down
 Sleep, 50
 Click, 260, 329 Left, , Up
 Sleep, 50
-Send, 7AB50E44-1ABE787D-5E5B5204-C0.bmp
+Send, 7AB50E44-1ABE787D-5E54B204-C0.bmp
 Sleep, 50
 Send, {Enter}
 Sleep, 333
@@ -73,12 +73,12 @@ Send, _ReaderLoadList.txt
 Sleep, 50
 Send, {Enter}
 Sleep, 500
-Send, test3.dat
+Send,  test.dat
 Sleep, 50
 Send, {Enter}
-Sleep, 50
+Sleep, 5000
 Send, {Tab}{Enter}
-Sleep, 50
+Sleep, 5000
 Send, {LAlt Down}
 WinActivate
 Sleep, 333
