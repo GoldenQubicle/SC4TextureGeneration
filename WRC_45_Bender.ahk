@@ -1,4 +1,4 @@
-#Include %A_ScriptDir%\Bender_startup.ahk 
+#Include %A_ScriptDir%\STARTUP - Bender.ahk 
 
 wrc := WRC[4]
 
@@ -38,7 +38,6 @@ Loop,%RenderSet% {
 	Sleep, 100
 	Click, 204, 391 Left, , Up
 	Sleep, 100
-	; Send, {Tab}{Delete}{Delete}{Numpad4}{Numpad5}
 	Send, {Tab}{LShift Down}{End}{LShift Up}{Delete}{Numpad4}{Numpad5}{Tab}
 	Click, 1162, 717 Left, , Down
 	Sleep, 100

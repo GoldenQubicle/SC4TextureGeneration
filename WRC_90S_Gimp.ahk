@@ -1,4 +1,4 @@
-#Include %A_ScriptDir%\Gimp_startup.ahk 
+#Include %A_ScriptDir%\STARTUP - Gimp.ahk 
 
 wrc := WRC[1]
 

@@ -1,4 +1,4 @@
-#Include %A_ScriptDir%\Bender_startup.ahk 
+#Include %A_ScriptDir%\STARTUP - Bender.ahk 
 
 wrc := WRC[3]
 
