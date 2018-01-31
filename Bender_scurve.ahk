@@ -3,52 +3,60 @@
 wrc := WRC[3]
 
 
+
+; settings
+Sleep, 100
+Click, 432, 712 Left, , Down
+Sleep, 100
+Click, 432, 712 Left, , Up
+Sleep, 100
+Click, 432, 712 Left, , Down
+Sleep, 100
+Click, 432, 712 Left, , Up
+Sleep, 100
+Click, 472, 717 Left, , Down
+Sleep, 100
+Click, 472, 717 Left, , Up
+Sleep, 100
+
 Loop,%RenderSet% {
 	Sleep, 100
 	texture := TextDefs[A_Index]
 	Sleep, 100
 	OpenAndSelectFile(texture)
 
-	Click, 62, 480 Left, , Down
 	Sleep, 100
-	Click, 62, 480 Left, , Up
+	Click, 361, 16 Left, , Down
 	Sleep, 100
-	Click, 205, 498 Left, , Down
+	Click, 361, 16 Left, , Up
 	Sleep, 100
-	Click, 205, 498 Left, , Up
+	Click, 58, 479 Left, , Down
 	Sleep, 100
-	Click, 205, 498 Left, , Down
+	Click, 58, 478 Left, , Up
 	Sleep, 100
-	Click, 205, 498 Left, , Up
+	Click, 204, 496 Left, , Down
 	Sleep, 100
-	Click, 205, 498 Left, , Down
+	Click, 204, 496 Left, , Up
 	Sleep, 100
-	Click, 205, 498 Left, , Up
+	Click, 204, 496 Left, , Down
 	Sleep, 100
-	Click, 205, 524 Left, , Down
+	Click, 204, 496 Left, , Up
 	Sleep, 100
-	Click, 205, 524 Left, , Up
+	Click, 204, 496 Left, , Down
 	Sleep, 100
-	Click, 467, 715 Left, , Down
+	Click, 204, 496 Left, , Up
 	Sleep, 100
-	Click, 467, 716 Left, , Up
+	Click, 201, 523 Left, , Down
 	Sleep, 100
-	Click, 435, 708 Left, , Down
+	Click, 201, 523 Left, , Up
 	Sleep, 100
-	Click, 435, 708 Left, , Up
+	Click, 1149, 707 Left, , Down
 	Sleep, 100
-	Click, 435, 708 Left, , Down
+	Click, 1149, 706 Left, , Up
 	Sleep, 100
-	Click, 435, 708 Left, , Up
+	Click, 919, 462 Left, , Down
 	Sleep, 100
-
-	Click, 1160, 710 Left, , Down
-	Sleep, 100
-	Click, 1160, 710 Left, , Up
-	Sleep, 100
-	Click, 715, 382 Left, , Down
-	Sleep, 100
-	Click, 715, 382 Left, , Up
+	Click, 919, 462 Left, , Up
 	Sleep, 100
 
 	Send, %wrc%%texture%.png

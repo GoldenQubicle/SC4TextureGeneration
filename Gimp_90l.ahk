@@ -15,6 +15,8 @@ Loop,%RenderSet% {
 
 	
 	Sleep, 100
+	Sleep, 100
+	Send, {LAlt Down}{i}{LAlt Up}{t}{1}
 	textureIID := 90l[1]
 	Clipboard := WealthDefs[texture]
 	iid := Wealth(textureIID)	
@@ -26,7 +28,8 @@ Loop,%RenderSet% {
 		closeFile()
 		Sleep, 100
 	}	
-	
+	Sleep, 100
+	Send, {LAlt Down}{i}{LAlt Up}{t}{1}
 	Sleep, 100
 	textureIID := 90l[2]
 	Clipboard := WealthDefs[texture]
@@ -35,6 +38,8 @@ Loop,%RenderSet% {
 	ExportTile(iid)		
 	Sleep, 100
 
+	Sleep, 100
+	Send, {LAlt Down}{i}{LAlt Up}{t}{1}
 	Sleep, 100
 	textureIID := 90l[3]
 	Clipboard := WealthDefs[texture]
@@ -49,6 +54,8 @@ Loop,%RenderSet% {
 	}	
 
 	Sleep, 100
+	Send, {LAlt Down}{i}{LAlt Up}{t}{1}
+	Sleep, 100
 	textureIID := 90l[4]
 	Clipboard := WealthDefs[texture]
 	iid := Wealth(textureIID)	
@@ -56,6 +63,8 @@ Loop,%RenderSet% {
 	ExportTile(iid)		
 	Sleep, 100
 
+	Sleep, 100
+	Send, {LAlt Down}{i}{LAlt Up}{t}{1}
 	Sleep, 100
 	textureIID := 90l[5]
 	Clipboard := WealthDefs[texture]

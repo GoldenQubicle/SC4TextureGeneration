@@ -36,8 +36,8 @@ closeFile(){
 }
 
 ExportTile(fileName){
-	Sleep, 100
-	Send, {LAlt Down}{i}{LAlt Up}{t}{1}
+	; Sleep, 100
+	; Send, {LAlt Down}{i}{LAlt Up}{t}{1}
 	Sleep, 100
 	Send, {LControl Down}{LShift Down}{e}
 	Sleep, 100
