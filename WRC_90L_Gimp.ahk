@@ -11,7 +11,7 @@ Loop,%RenderSet% {
 	Click
 	Sleep, 100
 	GuideNSlice()
-	Sleep, 1000
+	Sleep, 2500
 
 	
 	Sleep, 100
@@ -67,26 +67,29 @@ Loop,%RenderSet% {
 	Send, {LAlt Down}{i}{LAlt Up}{t}{1}
 	Sleep, 100
 	textureIID := 90l[5]
+
+	
 	Clipboard := WealthDefs[texture]
 	iid := Wealth(textureIID)	
 	Sleep, 100
 	ExportTile(iid)		
 	Sleep, 100
 
-	Send, {LAlt Down}{f}{LAlt Up}{c}
+	Send, {LControl Down}{LShift Down}{w}{LShift Up}{LControl Up}
+
+	; Send, {LAlt Down}{f}{LAlt Up}{c}
+	; WinActivate
+	; Sleep, 100
+	; Send, {LControl Down}{d}{LControl Up}
+	; WinActivate
+	; Sleep, 100
+	; Send, {LAlt Down}{f}{LAlt Up}{c}
+	; WinActivate
+	Sleep, 100
+	Send, {LAlt Down}{d}{LAlt Up}
 	WinActivate
 	Sleep, 100
-	Send, {LControl Down}{d}
-	WinActivate
-	Sleep, 100
-	Send, {LControl Up}{LAlt Down}{f}{LAlt Up}{c}
-	WinActivate
-	Sleep, 100
-	Send, {LControl Down}{d}
-	WinActivate
-	Sleep, 100
-	Send, {LControl Up}
-	Sleep, 100
+
 }
 
 GuideNSlice(){

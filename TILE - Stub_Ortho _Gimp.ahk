@@ -1,16 +1,13 @@
 #Include %A_ScriptDir%\STARTUP - Gimp.ahk 
 
 
-Loop, %RenderSet% {
-
+Loop,%RenderSet% {
 	texture := TextDefs[A_Index]
-	file = %texture%.png
-	Sleep, 100
+	file = %texture%_Stub.png
 	SelectFile(file)
 	Sleep, 100
-
+	textureIID := Stubs[1]
 	Sleep, 100
-	textureIID := Ortho[1]
 	Clipboard := WealthDefs[texture]
 	iid := Wealth(textureIID)	
 	Sleep, 100

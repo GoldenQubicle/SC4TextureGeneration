@@ -19,6 +19,22 @@ Sleep, 100
 Click, 472, 717 Left, , Up
 Sleep, 100
 
+			; sharpen
+	Sleep, 100
+	Click, 901, 712 Left, , Down
+	Sleep, 100
+	Click, 901, 712 Left, , Up
+	Sleep, 100
+	Click, 1020, 711 Left, , Down
+	Sleep, 100
+	Click, 1020, 711 Left, , Up
+	Sleep, 100
+	Click, 1020, 711 Left, , Down
+	Sleep, 100
+	Click, 1020, 711 Left, , Up
+	Sleep, 100
+	Send, {Numpad2}{Numpad0}
+
 Loop,%RenderSet% {
 	Sleep, 100
 	texture := TextDefs[A_Index]

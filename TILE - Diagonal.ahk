@@ -1,5 +1,21 @@
 #Include %A_ScriptDir%\STARTUP - Bender.ahk 
 
+	; sharpen
+	Sleep, 100
+	Click, 901, 712 Left, , Down
+	Sleep, 100
+	Click, 901, 712 Left, , Up
+	Sleep, 100
+	Click, 1020, 711 Left, , Down
+	Sleep, 100
+	Click, 1020, 711 Left, , Up
+	Sleep, 100
+	Click, 1020, 711 Left, , Down
+	Sleep, 100
+	Click, 1020, 711 Left, , Up
+	Sleep, 100
+	Send, {Numpad2}{Numpad7}
+
 
 Loop,%RenderSet% {
 	Sleep, 100
