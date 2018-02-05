@@ -16,9 +16,9 @@ SCurve := ["0x5E5B0204-C0", "0x5E5B1204-C0", "0x5E5B2204-C0"]
 
 Ortho := ["0x5E54B204-C0"]
 Diagonal := ["0x5E572204-C0"]
+DiaOrtho := ["0x5E571204-C0", "0x5E570204-C0"]
 Curve := [""]
 Stubs := ["", ""]
-OrthoDia := ["",""]
 
 
 
