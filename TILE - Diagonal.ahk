@@ -38,13 +38,13 @@ Loop,%RenderSet% {
 	Sleep, 100
 
 
-	textureIID := Diagonal[1]
-	Clipboard := WealthDefs[texture]
-	iid_start := SubStr(textureIID, 1, 8)
-	iid_end := SubStr(textureIID, 10)
-	result = %iid_start%%Clipboard%%iid_end%.png
+	; textureIID := Diagonal[1]
+	; Clipboard := WealthDefs[texture]
+	; iid_start := SubStr(textureIID, 1, 8)
+	; iid_end := SubStr(textureIID, 10)
+	; result = %iid_start%%Clipboard%%iid_end%.png
 
-	; result = %texture%_Diagonal.png
+	result = %texture%_Diagonal.png
 
 	Sleep, 100
 	Send, %result%

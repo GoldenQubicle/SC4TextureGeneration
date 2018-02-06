@@ -1,102 +1,230 @@
 #Include %A_ScriptDir%\STARTUP - Gimp.ahk 
 
-wrc := WRC[1] ;using the small 90 wrc curve as template
 
 Loop, %RenderSet% {
 
 	texture := TextDefs[A_Index]
-	curve = %wrc%%texture%
 	file = %texture%.png
 	Sleep, 100
 	SelectFile(file)
 	Sleep, 1000
 	Click
 
-
-	Send, {LAlt Down}{i}{LAlt Up}{t}{c}
-	WinActivate
 	Sleep, 100
+	Send, {LAlt Down}{i}{LAlt Up}{t}{w}
+	Sleep, 100
+	WinActivate
+	Sleep, 333
 	Send, {LAlt Down}{i}{LAlt Up}{v}
 	WinActivate
 	Sleep, 100
-	Send, {Numpad5}{Numpad1}{Numpad2}{LAlt Down}{r}{LAlt Up}{Right}{Enter}
-	WinActivate
+	Send, {Numpad5}{Numpad1}{Numpad2}
 	Sleep, 100
-	Send, {LAlt Down}{l}{LAlt Up}{t}{o}
-	WinActivate
+	Send, {LAlt Down}{r}{LAlt Up}{Right}{Enter}
 	Sleep, 100
-	Send, {NumpadSub}{Numpad1}{Numpad4}{Numpad4}
-	Sleep, 100
-	Send, {Tab}{Tab}{Tab}{Tab}{Down}{Down}{Tab}{Tab}{Enter}
-	WinActivate
-	Sleep, 100
-	Send, {LControl Down}{o}
-	WinActivate
-	Sleep, 250
-	Send, {LControl Up}{LShift Down}{End}{LShift Up}{Delete}
-	Sleep, 250
-	Send, %curve%
-	Sleep, 100
-	Send, {Enter}	
+
+	file = %texture%_Diagonal.png
+	SelectFile(file)
 	Sleep, 1000
-	Click
+	Click	
+
+	Sleep, 100
+	Send, {LAlt Down}{i}{LAlt Up}{t}{c}
+	Sleep, 100
+	Send, {LControl Down}{a}{LControl Up}
+	Sleep, 100
+	Send, {LControl Down}{LShift Down}{c}{LShift Up}{LControl Up}
+	Sleep, 100
+	Send, {LControl Down}{w}{LControl Up}
 	Sleep, 100
 	WinActivate
-	Send, {LControl Down}{a}
-	Sleep, 333
-	Send, {LControl Up}{LControl Down}{LShift Down}{c}{LShift Up}
+	Send, {LAlt Down}{d}{LAlt Up}
 	Sleep, 100
-	Send, {LControl Up}{LControl Down}{w}
 	WinActivate
-	Sleep, 333
-	Send, {LControl Up}{LAlt Down}{d}
-	WinActivate
-	Sleep, 333
-	Send, {LAlt Up}{LControl Down}
 	Sleep, 100
-	Send, {LControl Up}{LAlt Down}{l}{LAlt Up}{Enter}
-	WinActivate, New Layer ahk_class gdkWindowToplevel
-	Sleep, 333
+	Send, {LAlt Down}{e}{LAlt Up}{a}{l}
+	Sleep, 100	
+	WinActivate
+	Sleep, 100
+	Send, {LAlt Down}{l}{LAlt Up}{o}{o}{Enter}
+	Sleep, 100
+	WinActivate
+	Sleep, 100
+	Send, {Numpad2}{Numpad5}{Numpad6}
+	Sleep, 100	
+	Send, {LAlt Down}{o}{LAlt Up}
+	Sleep, 250	
+	WinActivate	
+	Sleep, 250
+
+	file = %texture%_DiaOrtho.png
+	SelectFile(file)
+	Sleep, 1000
+	Click	
+
+	Sleep, 100
+	Send, {LAlt Down}{l}{LAlt Up}{Up}{Enter}
+	Sleep, 100
+	WinActivate
+	Sleep, 100
+	Send, {Numpad8}{Numpad8}
+	Sleep, 100
+	Send, {LAlt Down}{o}{LAlt Up}
+	Sleep, 100
+	WinActivate
+	Sleep, 100	
+	Send, {LAlt Down}{i}{LAlt Up}{v}	
+	Sleep, 100
+	WinActivate
+	Sleep, 100
+	Send, {Numpad5}{Numpad1}{Numpad2}
+	Sleep, 100
+	Send, {Tab}
+	Sleep, 100	
+	Send, {Tab}
+	Sleep, 100
+	Send, {Numpad2}{Numpad5}{Numpad6}
+	Sleep, 100
+	Send, {LAlt Down}{r}{LAlt Up}	
+	Sleep, 500
+	Send, {Right}
+	Sleep, 100
 	Send, {Enter}
-	WinActivate
-	Sleep, 333
-	Send, {LControl Down}{v}
-	WinActivate
-	Sleep, 333
-	Send, {LControl Up}{LAlt Down}{l}{LAlt Up}{t}{o}
-	WinActivate, Offset ahk_class gdkWindowToplevel
-	Sleep, 333
-	Send, {Numpad1}{Numpad1}{Numpad2}{Tab}
-	Sleep, 100
-	Send, {Numpad1}{Numpad2}{Numpad8}{Tab}{Tab}{Tab}{Down}{Down}{Tab}{Tab}{Enter}
-	Sleep, 100
-	Send, {LControl Down}{LShift Down}{n}{LControl Up}{LShift Up}
-	Sleep, 100
-	Send, {LAlt Down}{i}{LAlt Up}{g}{Enter}
 	Sleep, 100
 	WinActivate
 	Sleep, 100
-	Send, {Down}{Tab}{Enter}
+	Send, {LAlt Down}{l}{LAlt Up}{i}
+	Sleep, 100
+	Send, {LControl Down}{a}{LControl Up}
+	Sleep, 100
+	Send, {LControl Down}{LShift Down}{c}{LControl Up}{LShift Up}
+	Sleep, 100
+	Send, {LControl Down}{w}{LControl Up}
+	Sleep, 100
 	WinActivate
 	Sleep, 100
+	Send, {LAlt Down}{d}{LAlt Up}
+	Sleep, 100
+	WinActivate
+	Sleep, 100
+	Send, {LAlt Down}{e}{LAlt Up}{a}{l}
+	Sleep, 100
+
+	Send, {LAlt Down}{l}{LAlt Up}{a}{p}
+	Sleep, 100	
+	Send, {PgDn}
+	Loop, 5{
+		Sleep, 100
+		Send, {Delete}
+	}	
+	Sleep, 100
+	Send, {PgDn}
+	Loop, 5{
+		Sleep, 100
+		Send, {Delete}
+	}
+	
+	Sleep, 100
+	Send, {LControl Down}{LShift Down}{a}{LShift Up}{LControl Up}
+	Sleep, 100
+	Send, {LAlt Down}{l}{LAlt Up}
+	Loop, 5{
+		Sleep, 100
+		Send, {Up}
+	}
+	Send, {Enter}
+	Sleep, 100	
+	WinActivate
+	Sleep, 100
+	Send, {Numpad8}{Numpad8}
+	Sleep, 100
+	Send, {Tab}
+	Sleep, 100
+	Send, {LAlt Down}{r}{LAlt Up}
+	Sleep, 100
+	Send, {Right}
+	Sleep, 100
+	Send, {Enter}
+	Sleep, 100
+	WinActivate
+	Sleep, 100
+	Send, {PgUp}
+	Sleep, 100
+	Send, {LAlt Down}{l}{LAlt Up}
+	Loop, 5{
+		Sleep, 100
+		Send, {Up}
+	}
+	Sleep, 100
+	Send, {Enter}
+	Sleep, 100
+	WinActivate
+	Sleep, 100
+	Send, {Tab}
+	Sleep, 100
+	Send, {Tab}
+	Sleep, 100
+	Send, {Numpad6}{Numpad0}
+	Sleep, 100
+	Send, {Tab}
+	Sleep, 100
+	Send, {Tab}
+	Sleep, 100
+	Send, {Tab}
+	Sleep, 100
+	Send, {NumpadSub}{Numpad1}{Numpad9}{Numpad6}
+	Sleep, 100
+	Send, {Tab}
+	Sleep, 100
+	Send, {LAlt Down}{r}{LAlt Up}
+	Sleep, 100
+	Send, {Right}
+	Sleep, 100
+	Send, {Enter}
+	Sleep, 100
+	WinActivate
+	Sleep, 100
+	Send, {LAlt Down}{i}{LAlt Up}
+	Sleep, 100
+	Send, {g}
+	Sleep, 100
+	Send, {Enter}
+	Sleep, 100
+	WinActivate
+	Sleep, 100
+	Send, {Down}
+	Sleep, 100
+	Send, {LAlt Down}{o}{LAlt Up}
+	Sleep, 100
+	WinActivate
+	Sleep, 100	
 	Send, {LAlt Down}{i}{LAlt Up}{t}{g}
 	Sleep, 100
 
-	Send, {LAlt Down}{i}{LAlt Up}{t}{w}
-	Sleep, 100
-	TextureIID := DiaOrtho[1]
+	Send, {LAlt Down}{i}{LAlt Up}{t}{w}	
+	textureIID := DiaOrtho[1]
 	Clipboard := WealthDefs[texture]
-	iid := Wealth(textureIID)
+	iid := Wealth(textureIID)	
 	Sleep, 100
-	ExportTile(iid)
+	ExportTile(iid)		
+	Sleep, 100
 
+	Send, {LAlt Down}{i}{LAlt Up}{t}{c}	
 	Sleep, 100
-	Send, {LAlt Down}{i}{LAlt Up}{t}{c}{LAlt Down}{i}{LAlt Up}{t}{h}
+	Send, {LAlt Down}{i}{LAlt Up}{t}{h}
 	Sleep, 100
-	TextureIID := DiaOrtho[2]
+
+	textureIID := DiaOrtho[2]
 	Clipboard := WealthDefs[texture]
-	iid := Wealth(textureIID)
+	iid := Wealth(textureIID)	
 	Sleep, 100
-	ExportTile(iid)
+	ExportTile(iid)		
+	Sleep, 100
 
+	Send, {LControl Down}{w}{LControl Up}
+	Sleep, 100
+	Send, {LAlt Down}{d}{LAlt Up}
+	Sleep, 500
+	
 }
+	
