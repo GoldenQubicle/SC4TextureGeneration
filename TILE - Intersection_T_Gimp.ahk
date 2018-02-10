@@ -73,26 +73,52 @@ Loop, %RenderSet% {
 	CopyClosePasteFile()
 	Send, {LControl Down}{LShift Down}{n}{LControl Up}{LShift Up} 	
 
-	; ChannelToSelection()
-	; LayerActivate()
-	; Send, {Delete}
-	; SelectNone()
-	; LayerBoundarySize(256, 128, 0, -128)
+	ChannelToSelection()
+	LayerActivate()
+	Send, {Delete}
+	SelectNone()
+	LayerBoundarySize(256, 128, 0, -128)
 
-	; file = %texture%_CURVE.png
-	; SelectFile(file)
-	; Sleep, 500
-	; Click
-	; CopyClosePasteFile()
-	; Send, {LControl Down}{LShift Down}{n}{LControl Up}{LShift Up} 
-	; Sleep, 100
-	; Send, {LAlt Down}{l}{LAlt Up}{t}{c}
-	; Sleep, 100
-	; ChannelToSelection()
-	; LayerActivate()
-	; Send, {Delete}
-	; SelectNone()
-	; LayerBoundarySize(256, 128, 0, 0)
+	file = %texture%_CURVE.png
+	SelectFile(file)
+	Sleep, 500
+	Click
+	CopyClosePasteFile()
+	Send, {LControl Down}{LShift Down}{n}{LControl Up}{LShift Up} 
+	Sleep, 100
+	Send, {LAlt Down}{l}{LAlt Up}{t}{c}
+	Sleep, 100
+	ChannelToSelection()
+	LayerActivate()
+	Send, {Delete}
+	SelectNone()
+	LayerBoundarySize(256, 128, 0, 0)
+	LayerMergeDown()
+	LayerBoundarySize(128, 256, 0, 0)
+
+	; surface ortho
+	file = %texture%.png
+	SelectFile(file)
+	Sleep, 500
+	Click
+	CopyClosePasteFile()
+	Send, {LControl Down}{LShift Down}{n}{LControl Up}{LShift Up} 
+	Sleep, 100
+	ChannelToSelection()
+	LayerActivate()
+	Send, {Delete}
+	SelectNone()
+	LayerBoundarySize(128, 256, -128, 0)
+
+	Send, {LAlt Down}{i}{LAlt Up}{t}{h}
+	Sleep, 100
+
+	textureIID := Intersections[1]
+	Clipboard := WealthDefs[texture]
+	iid := Wealth(textureIID)	
+	Sleep, 100
+	ExportTile(iid)		
+	Sleep, 100
 
 }
 
