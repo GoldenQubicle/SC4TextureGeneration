@@ -36,14 +36,12 @@ closeFile(){
 }
 
 ExportTile(fileName){
-	; Sleep, 100
-	; Send, {LAlt Down}{i}{LAlt Up}{t}{1}
 	Sleep, 100
 	Send, {LControl Down}{LShift Down}{e}
 	Sleep, 100
 	WinActivate, Export Image ahk_class gdkWindowToplevel
 	Sleep, 100
-	Send, {LControl Up}{LShift Up} ;{LControl Down}{v}{LControl Up}{Enter}
+	Send, {LControl Up}{LShift Up}
 	Sleep, 100
 	Send, %fileName%
 	Sleep, 100
