@@ -113,7 +113,7 @@ Loop, %RenderSet% {
 	Send, {LAlt Down}{i}{LAlt Up}{t}{h}
 	Sleep, 100
 
-	textureIID := Intersections[1]
+	textureIID := ThreeWays[1]
 	Clipboard := WealthDefs[texture]
 	iid := Wealth(textureIID)	
 	Sleep, 100
@@ -123,99 +123,3 @@ Loop, %RenderSet% {
 }
 
 
-LayerBoundarySize(LayerWidth, LayerHeight, OffSet_x, OffSet_y ){
-	Sleep, 100
-	Send, {LAlt Down}{l}{LAlt Up}
-	Loop, 5{
-		Sleep, 100
-		Send, {Up}
-	}
-	Send, {Enter}
-	Sleep, 100
-	Send, %LayerWidth%
-	Sleep, 100
-	Send, {Tab}{Tab}
-	Sleep, 100
-	Send, %LayerHeight%
-	Sleep, 100
-	Send, {Tab}{Tab}
-	Sleep, 100
-	Send, %OffSet_x%
-	Sleep, 100
-	Send, {Tab}
-	Sleep, 100
-	Send, %OffSet_y%
-	Sleep, 100
-	Send, {LAlt Down}{r}{LAlt Up}{Right}{Enter}
-	Sleep, 100
-	Send, {LAlt Down}{l}{LAlt Up}{i}
-	Sleep, 100
-}
-
-LayerMergeDown(){
-	Sleep, 100
-	Send, {LAlt Down}{l}{LAlt Up}{w}
-	Sleep, 100
-}
-
-SelectNone(){
-	Sleep, 100
-	Send, {LControl Down}{LShift Down}{a}{LControl Up}{LShift Up} 	
-	Sleep, 100
-}
-
-ChannelToSelection(){
-	Sleep, 100
-	Click, 102, 841 Right, , Down
-	Sleep, 100
-	Click, 102, 841 Right, , Up
-	Sleep, 100
-	Send, {c}
-	Sleep, 100
-}
-
-SelectAllAndCopy(){
-	Sleep, 100
-	Send, {LControl Down}{a}{LControl Up}
-	Sleep, 100
-	Send, {LControl Down}{c}{LControl Up}
-	Sleep, 100
-}
-
-PasteAsNewLayer(){
-	Sleep, 100
-	Send, {LControl Down}{v}{LControl Up}
-	Sleep, 100
-	Send, {LControl Down}{LShift Down}{n}{LControl Up}{LShift Up} 	
-	Sleep, 100
-
-}
-
-CopyClosePasteFile(){
-	SelectAllAndCopy()
-	closeFile()
-	Send, {LControl Down}{v}{LControl Up}
-	Sleep, 100
-}
-
-AlphaSelectionToChannel(){
-	Sleep, 100
-	Send, {LAlt Down}{l}{LAlt Up}{a}{p}
-	Sleep, 100
-	Send, {LAlt Down}{s}{LAlt Up}{c}
-	SelectNone()
-}
-
-LayerDelete(){
-	Sleep, 100
-	Send, {LAlt Down}{l}{LAlt Up}{d}
-	Sleep, 100
-}
-
-LayerActivate(){
-	Sleep, 100
-	Click, 1509, 184 Left, , Down
-	Sleep, 10
-	Click, 1509, 184 Left, , Up
-	Sleep, 100
-}

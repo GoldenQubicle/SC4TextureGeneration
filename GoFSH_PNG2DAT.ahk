@@ -11,30 +11,29 @@ Run, C:\Program Files (x86)\GoFSH Package\GoFSH.exe, %WorkDir%, Max
 Sleep, 100
 Send, {LShift Down}{Tab}{Tab}{LShift Up}{Down}{Down}{Enter}
 Sleep, 100
-
 Send, {Tab}{Enter}
-Sleep, 50
+Sleep, 100
 Send, 0x5E5B2204-C0.png
-Sleep,50
+Sleep, 100
 
 
-WinActivate, Select Bitmap or PNG File To Load ahk_class #32770
-Sleep, 333
+WinActivate
+Sleep, 100
 Click, 771, 25 Left, , Down
-Sleep, 10
+Sleep, 100
 Click, 771, 25 Left, , Up
-Sleep, 10
+Sleep, 100
 Send, {Enter}
-WinActivate, BMPxPNG  Image Format Converter for SC4 Textures ahk_class WindowsForms10.Window.8.app.0.378734a
+WinActivate
 Sleep, 1000
 Send, {Tab}{Enter}{Enter}
-WinActivate, Select directory for where to save - filename is fixed ahk_class #32770
+WinActivate
 Sleep, 1000
 Send, {y}
-WinActivate, BMPxPNG  Image Format Converter for SC4 Textures ahk_class WindowsForms10.Window.8.app.0.378734a
+WinActivate
 Sleep, 1000
 Send, {Tab}{Enter}{LAlt Down}{F4}
-WinActivate, GoFSH v3.3.5.51A3 --- ©2009-17 R. van Tilburg (rivit) ahk_class WindowsForms10.Window.8.app.0.378734a
+WinActivate
 Sleep, 333
 Send, {LAlt Up}
 
@@ -58,7 +57,7 @@ Click, 616, 629 Left, , Down
 Sleep, 10
 Click, 616, 628 Left, , Up
 
-Sleep, 90000 ; quick n dirty, this wil lvary greatly depening on number of files, script need to properly be waiting here
+Sleep, 6000 ; quick n dirty, this wil lvary greatly depening on number of files, script need to properly be waiting here
 
 Sleep, 10
 Click, 465, 363 Left, , Down
@@ -68,15 +67,17 @@ Sleep, 10
 WinActivate, FSHxDAT  Package Manager ahk_class WindowsForms10.Window.8.app.0.378734a
 Sleep, 333
 Click, 592, 585 Left, , Down
-Sleep, 10
+Sleep, 100
 Click, 592, 585 Left, , Up
-Sleep, 10
+Sleep, 100
 Send, _ReaderLoadList.txt
-Sleep, 50
+Sleep, 100
 Send, {Enter}
-Sleep, 500
-Send, aplha_v1.dat
-Sleep, 50
+
+Sleep, 3000
+
+Send, test_4way.dat
+Sleep, 100
 Send, {Enter}
 Sleep, 5000
 Send, {Tab}{Enter}
