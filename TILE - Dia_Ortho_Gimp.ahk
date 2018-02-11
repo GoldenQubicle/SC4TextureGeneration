@@ -205,6 +205,7 @@ Loop, %RenderSet% {
 	textureIID := DiaOrtho[1]
 	Clipboard := WealthDefs[texture]
 	iid := Wealth(textureIID)	
+	; iid = Street_v00_DO2
 	Sleep, 100
 	ExportTile(iid)		
 	Sleep, 100
@@ -217,6 +218,7 @@ Loop, %RenderSet% {
 	textureIID := DiaOrtho[2]
 	Clipboard := WealthDefs[texture]
 	iid := Wealth(textureIID)	
+	; iid = Street_v00_DO1
 	Sleep, 100
 	ExportTile(iid)		
 	Sleep, 100
