@@ -6,13 +6,13 @@
 Run, "C:\Program Files\GIMP 2\bin\gimp-2.8.exe" -f, %WorkDir%, Max
 WinMaximize  
 
-Sleep, 5000
+Sleep, 500
 WinActivate, GNU Image Manipulation Program ahk_class gdkWindowToplevel
 Sleep, 100
-Send, {LControl Down}{o}{LControl Up}
-Sleep, 100
-Send, {Down}
-Sleep, 100
+; Send, {LControl Down}{o}{LControl Up}
+; Sleep, 100
+; Send, {Down}
+; Sleep, 100
 
 
 LayerBoundarySize(LayerWidth, LayerHeight, OffSet_x, OffSet_y ){
