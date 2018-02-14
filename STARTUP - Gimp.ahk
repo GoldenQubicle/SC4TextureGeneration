@@ -9,6 +9,7 @@ WinMaximize
 Sleep, 500
 WinActivate, GNU Image Manipulation Program ahk_class gdkWindowToplevel
 Sleep, 100
+Send, {m}
 ; Send, {LControl Down}{o}{LControl Up}
 ; Sleep, 100
 ; Send, {Down}
