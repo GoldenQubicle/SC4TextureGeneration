@@ -22,7 +22,7 @@ DiaBend := ["0x5E577204-C0"]
 DiaOrthoBend := ["0x5E57A204-C0"]
 Curve := ["0x5E590204-C0"]
 Stubs := ["0x5E500204-C0", "0x5E573204-C0"]
-ThreeWays := ["0x5E557204-C0", "0x5E57B204-C0", "0x5E575204-C0"]
+ThreeWays := ["0x5E557204-C0", "0x5E57B204-C0", "0x5E575204-C0", "0x5E57F204-C0"]
 FourWays := ["0x5E527204-C0"]
 
 

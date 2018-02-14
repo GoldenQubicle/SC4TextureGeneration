@@ -196,18 +196,3 @@ Loop, %RenderSet% {
 }
 
 
-Shear(mag_x, mag_y){
-	Sleep, 100
-	Send, {LAlt Down}{t}{LAlt Up}{t}{h}
-	Sleep, 100
-	Send, %mag_x% 
-	Sleep, 100
-	Send, {Tab}
-	Sleep, 100
-	Send, %mag_y%
-	Sleep, 100
-	Send, {LAlt Down}{s}{LAlt Up}
-	Sleep, 100
-	Send, {LAlt Down}{l}{LAlt Up}{i}
-	Sleep, 100
-}

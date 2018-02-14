@@ -6,14 +6,30 @@
 Run, "C:\Program Files\GIMP 2\bin\gimp-2.8.exe" -f, %WorkDir%, Max
 WinMaximize  
 
-Sleep, 500
+Sleep, 5000
 WinActivate, GNU Image Manipulation Program ahk_class gdkWindowToplevel
 Sleep, 100
 Send, {m}
-; Send, {LControl Down}{o}{LControl Up}
-; Sleep, 100
-; Send, {Down}
-; Sleep, 100
+Send, {LControl Down}{o}{LControl Up}
+Sleep, 100
+Send, {Down}
+Sleep, 100
+
+Shear(mag_x, mag_y){
+	Sleep, 100
+	Send, {LAlt Down}{t}{LAlt Up}{t}{h}
+	Sleep, 100
+	Send, %mag_x% 
+	Sleep, 100
+	Send, {Tab}
+	Sleep, 100
+	Send, %mag_y%
+	Sleep, 100
+	Send, {LAlt Down}{s}{LAlt Up}
+	Sleep, 100
+	Send, {LAlt Down}{l}{LAlt Up}{i}
+	Sleep, 100
+}
 
 
 LayerBoundarySize(LayerWidth, LayerHeight, OffSet_x, OffSet_y ){
@@ -164,15 +180,15 @@ ExportTile(fileName){
 }
 
 SelectFile(texture){
-	Sleep, 100
+	Sleep, 250
 	Send, {LControl Down}{o}{LControl Up}
-	Sleep, 100
+	Sleep, 250
 	WinActivate, Open Image ahk_class gdkWindowToplevel
-	Sleep, 100
+	Sleep, 250
 	Send, {LControl Down}{a}{LControl Up}{Delete}
-	Sleep, 100
+	Sleep, 250
 	Send, %texture%
-	Sleep, 100
+	Sleep, 250
 	Send, {Enter}
 	WinActivate
 
