@@ -6,14 +6,14 @@
 Run, "C:\Program Files\GIMP 2\bin\gimp-2.8.exe" -f, %WorkDir%, Max
 WinMaximize  
 
-Sleep, 5000
+Sleep, 500
 WinActivate, GNU Image Manipulation Program ahk_class gdkWindowToplevel
 Sleep, 100
 Send, {m}
-Send, {LControl Down}{o}{LControl Up}
-Sleep, 100
-Send, {Down}
-Sleep, 100
+; Send, {LControl Down}{o}{LControl Up}
+; Sleep, 100
+; Send, {Down}
+; Sleep, 100
 
 Shear(mag_x, mag_y){
 	Sleep, 100
@@ -29,8 +29,32 @@ Shear(mag_x, mag_y){
 	Sleep, 100
 	Send, {LAlt Down}{l}{LAlt Up}{i}
 	Sleep, 100
+	Send, {m}
 }
 
+LayerOffset(X, Y){
+	Sleep, 100
+	Send, {LAlt Down}{l}{LAlt Up}{t}{o}
+	Sleep, 100
+	Send, %X%
+	Sleep, 100
+	Send, {Tab}
+	Sleep, 100
+	Send, %Y%
+	Sleep, 100
+	Loop, 3 {
+		Send, {Tab}
+		Sleep, 100
+	}
+	Loop, 2{
+		Send, {Down}
+		Sleep, 100
+	}
+	Send, {LAlt Down}{o}{LAlt Up}
+	Sleep, 100
+	Send, {LAlt Down}{l}{LAlt Up}{i}
+	Sleep, 100
+}
 
 LayerBoundarySize(LayerWidth, LayerHeight, OffSet_x, OffSet_y ){
 	Sleep, 100
