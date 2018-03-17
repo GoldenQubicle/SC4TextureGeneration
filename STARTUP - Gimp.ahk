@@ -9,11 +9,34 @@ WinMaximize
 Sleep, 500
 WinActivate, GNU Image Manipulation Program ahk_class gdkWindowToplevel
 Sleep, 100
-Send, {m}
+; Send, {m}
 ; Send, {LControl Down}{o}{LControl Up}
 ; Sleep, 100
 ; Send, {Down}
 ; Sleep, 100
+
+ExtractTrack(texure, aplha){
+	Sleep, 350
+	SelectFile(texure)
+	Sleep, 350
+	Click
+	Sleep, 350
+	SelectFile(aplha)
+	Sleep, 350
+	Click
+	CopyClosePasteFile()
+	Sleep, 100
+	AlphaSelectionToChannel()
+	LayerActivate()
+	LayerDelete()
+	ChannelToSelection()
+	LayerActivate()
+	Send, {LAlt Down}{s}{LAlt Up}{i}{Delete}
+	Sleep, 100
+	SelectNone()
+	Sleep, 100
+}
+
 
 Shear(mag_x, mag_y){
 	Sleep, 100
@@ -97,6 +120,14 @@ SelectNone(){
 	Sleep, 100
 }
 
+ApplyTracks(){
+	ChannelToSelection()
+	LayerActivate()
+	Send, {Delete}
+	Sleep, 100
+	SelectNone()
+}
+
 ChannelToSelection(){
 	Sleep, 100
 	Click, 102, 841 Right, , Down
@@ -127,7 +158,10 @@ PasteAsNewLayer(){
 CopyClosePasteFile(){
 	SelectAllAndCopy()
 	closeFile()
+	LayerActivate()
 	Send, {LControl Down}{v}{LControl Up}
+	Sleep, 100	
+	Send, {LControl Down}{LShift Down}{n}{LControl Up}{LShift Up} 	
 	Sleep, 100
 }
 
