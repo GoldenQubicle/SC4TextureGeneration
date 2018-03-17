@@ -1,5 +1,5 @@
 WorkDir = C:\Users\Erik\Documents\TextureStuff\
-RenderSet := 1
+RenderSet := 4
 TextDefs := ["Street_v00", "Street_v10", "Street_v20", "Street_v30"]
 WealthDefs := {"Street_v00":0, "Street_v10":7, "Street_v20":1, "Street_v30":4}
 
@@ -24,7 +24,7 @@ Curve := ["0x5E590204-C0"]
 Stubs := ["0x5E500204-C0", "0x5E573204-C0"]
 ThreeWays := ["0x5E557204-C0", "0x5E57B204-C0", "0x5E575204-C0", "0x5E57F204-C0", "0x5E57E204-C0", "0x5E57D204-C0"]
 FourWays := ["0x5E527204-C0", "0x5E57C204-C0"]
-
+Roundabout := ["0x5E5A5204-C0", "0x5E5A1204-C0"]
 
 
 	
