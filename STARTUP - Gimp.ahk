@@ -155,6 +155,46 @@ PasteAsNewLayer(){
 
 }
 
+LayerFlipHorizontal(){
+	Sleep, 100
+	Send, {LAlt Down}{l}{LAlt Up}
+	Sleep, 100
+	Send, {t}
+	Sleep, 100
+	Send, {h}
+	Sleep, 100
+}
+
+LayerRotate180(){
+	Sleep, 100
+	Send, {LAlt Down}{l}{LAlt Up}
+	Sleep, 100
+	Send, {t}
+	Sleep, 100
+	Send, {1}
+	Sleep, 100
+}
+
+LayerRotateClockwise(){
+	Sleep, 100
+	Send, {LAlt Down}{l}{LAlt Up}
+	Sleep, 100
+	Send, {t}
+	Sleep, 100
+	Send, {c}
+	Sleep, 100
+}
+
+LayerRotateCounterClockwise(){
+	Sleep, 100
+	Send, {LAlt Down}{l}{LAlt Up}
+	Sleep, 100
+	Send, {t}
+	Sleep, 100
+	Send, {w}
+	Sleep, 100
+}
+
 CopyClosePasteFile(){
 	SelectAllAndCopy()
 	closeFile()
