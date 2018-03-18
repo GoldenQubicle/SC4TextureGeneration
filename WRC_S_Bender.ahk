@@ -38,6 +38,8 @@ Sleep, 100
 Loop,%RenderSet% {
 	Sleep, 100
 	texture := TextDefs[A_Index]
+	; texture := TrackDefs[A_Index]
+
 	Sleep, 100
 	OpenAndSelectFile(texture)
 
